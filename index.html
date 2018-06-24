@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Order</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- //js -->
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <link href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header -->
+    <!-- navigation -->
+
+    <div class="nav-links">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand"><h1>Shoptime</h1></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav link-effect">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a class="scroll" style="cursor:pointer;">ORDERS</a></li>
+                        <li><a class="scroll" style="cursor:pointer;">PRODUCTS</a></li>
+                    </ul>
+                    <a class="admin" style="float:right;color:#CCCECF;padding-top:30px;cursor:pointer;">ADMIN</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- /navigation -->
+    <!-- //header -->
+    <!-- about -->
+    <div class="about" id="about">
+        <div class="container">
+            <div class="about-agileits-title">
+                <div style="float:left;width: 70%;">
+                    <h3>OVERVIEW</h3>
+                </div>
+                <div style="float:left;width: 20%;">
+                    <span style="float:left;color:#808080;">2018/6/6 <i class="fa fa-caret-right" style="color:#808080;"></i> 2018/6/13</span>
+                </div>
+                <div class="dropdown" style="float:left;width: 10%;">
+                    <button class="dropbtn" style="color:#808080;">Weekly <i class="fa fa-caret-down" style="color:#808080;"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Daily</a>
+                        <a href="#">Weekly</a>
+                        <a href="#">Monthly</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3ls-about-grids">
+                <div class="col-md-6 w3l-about-left">
+                    <h style="font-size:20px;font-weight:500;"><i class="fas fa-hand-holding-usd fa-lg mr-3"></i> TOTAL REVENUE</h><br />
+                    <h style="font-size:26px;font-weight:500;color:#7ED321;">54,540</h>
+                </div>
+                <div class="col-md-6 w3l-about-middle">
+                    <h style="font-size:20px;font-weight:500;"><i class="fas fa-boxes fa-lg mr-3"></i> TOTAL COST</h><br />
+                    <h style="font-size:26px;font-weight:500;color:#D0021B;">12,660</h>
+                </div>
+                <div class="col-md-6 w3l-about-right">
+                    <h style="font-size:20px;font-weight:500;"><i class="fas fa-money-check-alt fa-lg mr-3"></i> NET INCOME</h><br />
+                    <h style="font-size:26px;font-weight:500;color:#4A90E2;">41,880</h>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+
+            <div class="activity">
+                <div class="chart-box-title">
+                    <h5 style="font-size:24px;font-weight:700;margin-bottom:30px;">Activity</h5>
+                </div>
+                <div class="myChart">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+            <div class="w3ls-about-grids">
+                <div class="col-md-6 transaction-Web">
+                    <div class="sub-block" style="width:100%;align-items:flex-start;">
+                        <div class="title" style="font-size:24px;font-weight:700;margin-bottom:30px;">Transaction Website</div>
+                        <div style="width: 100%;">
+                            <div class="web-site" style="display:flex;align-items:center;margin-top:5px;margin-bottom:5px;">
+                                <div class="image-box" style="margin-right:20px;">
+                                    <i class="fab fa-facebook" style="font-size: 40px;margin-top:15px;"></i>
+                                </div>
+                                <div class="url-name" style="color:#9B9B9B;font-size:16px;">Facebook.com</div>
+                                <div class="number" style="font-weight:700;font-size:20px;margin-left:auto;margin-right:20px;">45,836</div>
+                                <div class="degree good" style="color:#7ed321;font-weight:700;font-size:16px;">
+                                    <i class="fas fa-arrow-up" style="font-weight:700;font-size:18px;margin-right:8px;"></i>
+                                    <span style="font-weight:700;font-size:18px;">20%</span>
+                                </div>
+                            </div>
+                            <hr style="margin:0px 0;width:100%;height:1px;background-color:#e1e1e1;border-top:1px solid #eee;" />
+                        </div>
+
+                        <div style="width: 100%;">
+                            <div class="web-site" style="display:flex;align-items:center;margin-top:5px;margin-bottom:5px;">
+                                <div class="image-box" style="margin-right:20px;">
+                                    <i class="fab fa-google" style="font-size: 40px;margin-top:15px;"></i>
+                                </div>
+                                <div class="url-name" style="color:#9B9B9B;font-size:16px;">Google.com</div>
+                                <div class="number" style="font-weight:700;font-size:20px;margin-left:auto;margin-right:20px;">23,582</div>
+                                <div class="degree good" style="color:#7ed321;font-weight:700;font-size:16px;">
+                                    <i class="fas fa-arrow-up" style="font-weight:700;font-size:18px;margin-right:8px;"></i>
+                                    <span style="font-weight:700;font-size:18px;">12%</span>
+                                </div>
+                            </div>
+                            <hr style="margin:0px 0;width:100%;height:1px;background-color:#e1e1e1;border-top:1px solid #eee;" />
+                        </div>
+
+                        <div style="width: 100%;">
+                            <div class="web-site" style="display:flex;align-items:center;margin-top:5px;margin-bottom:5px;">
+                                <div class="image-box" style="margin-right:20px;">
+                                    <i class="fab fa-youtube-square" style="font-size: 40px;margin-top:15px;"></i>
+                                </div>
+                                <div class="url-name" style="color:#9B9B9B;font-size:16px;">Youtube.com</div>
+                                <div class="number" style="font-weight:700;font-size:20px;margin-left:auto;margin-right:20px;">2,489</div>
+                                <div class="degree good" style="color:#D0021B;font-weight:700;font-size:16px;">
+                                    <i class="fas fa-arrow-down" style="font-weight:700;font-size:18px;margin-right:8px;"></i>
+                                    <span style="font-weight:700;font-size:18px;">15%</span>
+                                </div>
+                            </div>
+                            <hr style="margin:0px 0;width:100%;height:1px;background-color:#e1e1e1;border-top:1px solid #eee;" />
+                        </div>
+
+                        <div style="width: 100%;">
+                            <div class="web-site" style="display:flex;align-items:center;margin-top:5px;margin-bottom:5px;">
+                                <div class="image-box" style="margin-right:20px;">
+                                    <i class="fab fa-wordpress" style="font-size: 40px;margin-top:15px;"></i>
+                                </div>
+                                <div class="url-name" style="color:#9B9B9B;font-size:16px;">Wordpress.com</div>
+                                <div class="number" style="font-weight:700;font-size:20px;margin-left:auto;margin-right:20px;">1,057</div>
+                                <div class="degree good" style="color:#D0021B;font-weight:700;font-size:16px;">
+                                    <i class="fas fa-arrow-down" style="font-weight:700;font-size:18px;margin-right:8px;"></i>
+                                    <span style="font-weight:700;font-size:18px;">30%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 latest-order">
+                    <div class="sub-block">
+                        <div class="title" style="font-size:24px;font-weight:700;margin-bottom:30px;">Lastest Orders</div>
+
+                        <div style="width: 100%;">
+                            <div class="order" style="display:flex;align-items:center;height:100px;width:100%;">
+                                <div class="image-box" style="width:100px;height:100px;background-repeat:no-repeat;background-size:cover;background-position:50%;margin-right:20px;background-image:url(https://i3.cpcache.com/product/1365112678/Personalize_Vintage_Aged_To_Perfection_T-Shirt_300x300.jpg?height=300&width=300&qv=90&side=front&Filters=[{%22name%22:%22background%22,%22value%22:%22ddddde%22,%22sequence%22:2}]);"></div>
+                                <div class="information">
+                                    <div class="sub-title" style="font-size:20px;font-weight:700;">Vintage T-shirt</div>
+                                    <div class="bougth-time" style="font-size:16px;color:#c8c8c8;margin-top:8px;white-space:nowrap;">
+                                        <i class="fas fa-clock" style="color:#757575;font-size:16px;margin-right:8px;width:16px;text-align:center;font-weight:900;"></i>2018/6/13  13:42
+                                    </div>
+                                    <div class="boughter" style="font-size:16px;color:#c8c8c8;margin-top:8px;white-space:nowrap;">
+                                        <i class="fas fa-male" style="color:#757575;margin-right:13px;margin-left:5px;"></i>Belle Willis
+                                    </div>
+                                </div>
+                                <div class="total-cost" style="height:100%;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;margin-left:auto;">
+                                    <div class="string" style="font-size:14px;">Total</div>
+                                    <div class="cost" style="font-size:20px;font-weight:700;">3,200</div>
+                                </div>
+                            </div>
+                            <hr style="margin:7px 0;width:100%;height:1px;background-color:#e1e1e1;border-top:1px solid #eee;" />
+                        </div>
+
+                        <div style="width: 100%;">
+                            <div class="order" style="display:flex;align-items:center;height:100px;width:100%;">
+                                <div class="image-box" style="width:100px;height:100px;background-repeat:no-repeat;background-size:cover;background-position:50%;margin-right:20px;background-image:url(https://www.jeanstore.co.uk/images/_lib//wrangler-western-denim-jacket-blue-black-8010242-0-1413212514000.jpg);"></div>
+                                <div class="information">
+                                    <div class="sub-title" style="font-size:20px;font-weight:700;">Cowboy Jacket</div>
+                                    <div class="bougth-time" style="font-size:16px;color:#c8c8c8;margin-top:8px;white-space:nowrap;">
+                                        <i class="fas fa-clock" style="color:#757575;font-size:16px;margin-right:8px;width:16px;text-align:center;font-weight:900;"></i>2018/6/13  10:45
+                                    </div>
+                                    <div class="boughter" style="font-size:16px;color:#c8c8c8;margin-top:8px;white-space:nowrap;">
+                                        <i class="fas fa-male" style="color:#757575;margin-right:13px;margin-left:5px;"></i>Adrian Cummings
+                                    </div>
+                                </div>
+                                <div class="total-cost" style="height:100%;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;margin-left:auto;">
+                                    <div class="string" style="font-size:14px;">Total</div>
+                                    <div class="cost" style="font-size:20px;font-weight:700;">2,800</div>
+                                </div>
+                            </div>
+                            <hr style="margin:7px 0;width:100%;height:1px;background-color:#e1e1e1;border-top:1px solid #eee;" />
+                        </div>
+
+                        <div style="width: 100%;">
+                            <div class="order" style="display:flex;align-items:center;height:100px;width:100%;">
+                                <div class="image-box" style="width:100px;height:100px;background-repeat:no-repeat;background-size:cover;background-position:50%;margin-right:20px;background-image:url(https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Champion-USA-Black-Coaches-Jacket-_279804-front-US.jpg);"></div>
+                                <div class="information">
+                                    <div class="sub-title" style="font-size:20px;font-weight:700;">Coach Coat</div>
+                                    <div class="bougth-time" style="font-size:16px;color:#c8c8c8;margin-top:8px;white-space:nowrap;">
+                                        <i class="fas fa-clock" style="color:#757575;font-size:16px;margin-right:8px;width:16px;text-align:center;font-weight:900;"></i>2018/6/13  8:26
+                                    </div>
+                                    <div class="boughter" style="font-size:16px;color:#c8c8c8;margin-top:8px;white-space:nowrap;">
+                                        <i class="fas fa-male" style="color:#757575;margin-right:13px;margin-left:5px;"></i>Lura Holland
+                                    </div>
+                                </div>
+                                <div class="total-cost" style="height:100%;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;margin-left:auto;">
+                                    <div class="string" style="font-size:14px;">Total</div>
+                                    <div class="cost" style="font-size:20px;font-weight:700;">1,600</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //about -->
+    <!-- for bootstrap working -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- //for bootstrap working -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".nav>li").first().addClass("nav-list-act").removeClass("nav-list");
+            $(".nav>li").click(function () {
+                $(this).siblings("li").removeClass("nav-list-act").addClass("nav-list");
+                $(this).addClass("nav-list-act").removeClass("nav-list");
+            });
+        });
+    </script>
+    <script>
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["JUN 6", "JUL 7", "AUG 8", "SEP 9", "OCT 10", "NOV 11"],
+                datasets: [{
+                    label: 'Total Revenue',
+                    fill: false,
+                    data: [1020, 3000, 4150, 3500, 4500, 6600],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    backgroundColor: 'rgba(255,99,132,1)',
+                    borderWidth: 2
+                }, {
+                    label: 'Total Cost',
+                    fill: false,
+                    data: [900, 2450, 1050, 3100, 3500, 1250],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    backgroundColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2
+                }, {
+                    label: 'Net Income',
+                    fill: false,
+                    data: [320, 550, 3000, 400, 1000, 5350],
+                    borderColor: [
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    backgroundColor: 'rgba(255, 206, 86, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Chart Display',
+                    fontSize: 16
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            display: true,
+                            beginAtZero: true,
+                            min: 0,
+                            max: 8000,
+                            stepSize: 2000,
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Dollars'
+                        },
+                    }]
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
